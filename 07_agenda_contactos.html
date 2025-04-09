@@ -18,8 +18,21 @@
         let nombres=[];
         function guardar(){
             let n=document.getElementById("nombre").value;
+            let repetido=false;
             nombres.push(n);
-            alert("Contacto guardado");
+            for(let nombre of nombres){
+                if(nombre==n){
+                    repetido=true;
+                }
+                
+                       }
+            
+if(repetido==false){
+    nombres.push(n);
+    alert("Contacto guardado");
+}else{
+    alert("El contacto ya existe")
+}
         }
         function mostrar(){
             let html="";
